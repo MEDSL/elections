@@ -7,5 +7,5 @@
 \title{elections}
 \description{
 This is an R package for accessing data on U.S. elections from the MIT
-Election and Data Science Lab.
+Election Data and Science Lab.
 }
