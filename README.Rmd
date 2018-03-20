@@ -1,0 +1,65 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+devtools::load_all()
+library(dplyr)
+```
+
+# elections: MEDSL data in R
+
+This is an R package for accessing data on U.S. elections from the [MIT Election and Data Science Lab](https://electionlab.mit.edu]).
+
+## Installation
+
+Install from GitHub:
+
+```{r, eval = FALSE}
+if (!require('devtools', quietly = TRUE)) install.packages('devtools')
+devtools::install_github('MEDSL/elections')
+```
+
+## Use
+
+```{r, result = 'hide', message = FALSE, eval = FALSE}
+library(elections)
+# We'll use dplyr for ease of illustration below
+library(dplyr)
+```
+
+The package makes available the following datasets:
+
+* `presidential_precincts_2016`
+* `senate_precincts_2016`
+* `house_precincts_2016`
+* `state_ids`
+
+```{r}
+presidential_precincts_2016 %>%
+  select(state_postal, precinct, candidate, party, writein, votes)
+```
+
+```{r}
+senate_precincts_2016 %>%
+  select(state_postal, precinct, candidate, party, writein, votes)
+
+```
+
+```{r}
+house_precincts_2016 %>%
+  select(state_postal, precinct, candidate, party, writein, votes)
+```
+
+State identifiers:
+
+```{r}
+head(state_ids)
+```

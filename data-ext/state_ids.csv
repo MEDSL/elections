@@ -1,0 +1,52 @@
+state,state_icpsr,state_postal,state_fips
+Alabama,41,AL,1
+Alaska,81,AK,2
+Arizona,61,AZ,4
+Arkansas,42,AR,5
+California,71,CA,6
+Colorado,62,CO,8
+Connecticut,1,CT,9
+Delaware,11,DE,10
+Florida,43,FL,12
+Georgia,44,GA,13
+Hawaii,82,HI,15
+Idaho,63,ID,16
+Illinois,21,IL,17
+Indiana,22,IN,18
+Iowa,31,IA,19
+Kansas,32,KS,20
+Kentucky,51,KY,21
+Louisiana,45,LA,22
+Maine,2,ME,23
+Maryland,52,MD,24
+Massachusetts,3,MA,25
+Michigan,23,MI,26
+Minnesota,33,MN,27
+Mississippi,46,MS,28
+Missouri,34,MO,29
+Montana,64,MT,30
+Nebraska,35,NE,31
+Nevada,65,NV,32
+New Hampshire,4,NH,33
+New Jersey,12,NJ,34
+New Mexico,66,NM,35
+New York,13,NY,36
+North Carolina,47,NC,37
+North Dakota,36,ND,38
+Ohio,24,OH,39
+Oklahoma,53,OK,40
+Oregon,72,OR,41
+Pennsylvania,14,PA,42
+Rhode Island,5,RI,44
+South Carolina,48,SC,45
+South Dakota,37,SD,46
+Tennessee,54,TN,47
+Texas,49,TX,48
+Utah,67,UT,49
+Vermont,6,VT,50
+Virginia,40,VA,51
+Washington,73,WA,53
+West Virginia,56,WV,54
+Wisconsin,25,WI,55
+Wyoming,68,WY,56
+District of Columbia,55,DC,11

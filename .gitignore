@@ -1,0 +1,8 @@
+*.tar.gz
+elections.Rcheck/
+.DS_Store
+.Rproj*
+README.html
+readme-cache
+src/*.o
+src/*.so
