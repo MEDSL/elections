@@ -5,8 +5,6 @@ elections: MEDSL data in R
 
 This is an R package for accessing data on U.S. elections from the [MIT Election Data and Science Lab](https://electionlab.mit.edu).
 
-The datasets available via the package are the latest
-
 Installation
 ------------
 
