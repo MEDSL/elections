@@ -1,6 +1,6 @@
 Package: elections
 Title: Elections Data from the MIT Election Data and Science Lab
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: person("James", "Dunham", email = "james@jdunham.io", role = c("aut", "cre"))
 Description: Access data on U.S. elections from the MIT Election Data and Science Lab.
 url: https://github.com/MEDSL/elections

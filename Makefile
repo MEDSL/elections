@@ -9,7 +9,7 @@ R_ARGS := --no-site-file --no-environ --no-save \
 R := R
 
 .PHONY: all clean docs
-all: $(RDA_FILES) $(RD_FILES) README.md README.Rmd
+all: $(RDA_FILES) $(RD_FILES) README.md README.Rmd build install
 
 data/%.rda: $(DATAVERSE_DIR)/%.rda
 	cp $< $@

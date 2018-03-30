@@ -5,6 +5,8 @@ elections: MEDSL data in R
 
 This is an R package for accessing data on U.S. elections from the [MIT Election Data and Science Lab](https://electionlab.mit.edu).
 
+The datasets available via the package are the latest
+
 Installation
 ------------
 
@@ -26,66 +28,106 @@ library(dplyr)
 
 The package makes available the following datasets:
 
--   `presidential_precincts_2016`
--   `senate_precincts_2016`
--   `house_precincts_2016`
+-   [`presidential_precincts_2016`](http://dx.doi.org/10.7910/DVN/LYWX3D)
+-   [`senate_precincts_2016`](http://dx.doi.org/10.7910/DVN/NLTQAD)
+-   [`house_precincts_2016`](http://dx.doi.org/10.7910/DVN/PSKDUJ)
+-   [`state_precincts_2016`](http://dx.doi.org/10.7910/DVN/GSZG1O)
+-   [`local_precincts_2016`](http://dx.doi.org/10.7910/DVN/Q8OHRS)
 -   `state_ids`
 
 ``` r
 presidential_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
-#> # A tibble: 249,870 x 6
-#>    state_postal precinct               candidate      party  writein votes
-#>    <chr>        <chr>                  <chr>          <chr>  <lgl>   <int>
-#>  1 AK           01-446 Aurora          Darrell Castle const… F           5
-#>  2 AK           01-446 Aurora          Donald Trump   repub… F         434
-#>  3 AK           01-446 Aurora          Gary Johnson   liber… F          75
-#>  4 AK           01-446 Aurora          Hillary Clint… democ… F         295
-#>  5 AK           01-446 Aurora          Jill Stein     green  F          23
-#>  6 AK           01-446 Aurora          Rocky Roque d… new a… F           7
-#>  7 AK           01-446 Aurora          <NA>           none   T          29
-#>  8 AK           01-455 Fairbanks No. 1 Darrell Castle const… F           2
-#>  9 AK           01-455 Fairbanks No. 1 Donald Trump   repub… F         113
-#> 10 AK           01-455 Fairbanks No. 1 Gary Johnson   liber… F           8
-#> # ... with 249,860 more rows
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+#> # A tibble: 496,855 x 6
+#>    state_postal county_fips precinct               candidate  party  votes
+#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
+#>  1 AL           01001       10.JONES.COMMUNITY.CTR Donald Tr… repu… 2.18e²
+#>  2 AL           01001       10.JONES.COMMUNITY.CTR Gary John… inde… 0     
+#>  3 AL           01001       10.JONES.COMMUNITY.CTR Hillary C… demo… 1.35e²
+#>  4 AL           01001       10.JONES.COMMUNITY.CTR Jill Stein inde… 1.00e⁰
+#>  5 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
+#>  6 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  0     
+#>  7 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  4.00e⁰
+#>  8 AL           01001       100.TRINITY.METHODIST  Donald Tr… repu… 1.80e³
+#>  9 AL           01001       100.TRINITY.METHODIST  Gary John… inde… 6.00e¹
+#> 10 AL           01001       100.TRINITY.METHODIST  Hillary C… demo… 2.85e²
+#> # ... with 496,845 more rows
 ```
 
 ``` r
 senate_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
-#> # A tibble: 133,816 x 6
-#>    state_postal precinct               candidate      party  writein votes
-#>    <chr>        <chr>                  <chr>          <chr>  <lgl>   <int>
-#>  1 AK           01-446 Aurora          Breck A. Craig new a… F           5
-#>  2 AK           01-446 Aurora          Joe Miller     liber… F         261
-#>  3 AK           01-446 Aurora          Lisa Murkowski repub… F         409
-#>  4 AK           01-446 Aurora          Margaret Stock new a… F         105
-#>  5 AK           01-446 Aurora          Ray Metcalfe   democ… F          70
-#>  6 AK           01-446 Aurora          Ted Gianoutsos new a… F           8
-#>  7 AK           01-446 Aurora          <NA>           none   T           4
-#>  8 AK           01-455 Fairbanks No. 1 Breck A. Craig new a… F           1
-#>  9 AK           01-455 Fairbanks No. 1 Joe Miller     liber… F          74
-#> 10 AK           01-455 Fairbanks No. 1 Lisa Murkowski repub… F          85
-#> # ... with 133,806 more rows
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+#> # A tibble: 248,271 x 6
+#>    state_postal county_fips precinct               candidate  party  votes
+#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
+#>  1 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
+#>  2 AL           01001       10.JONES.COMMUNITY.CTR Richard C… repu… 2.14e²
+#>  3 AL           01001       10.JONES.COMMUNITY.CTR Ron Crump… demo… 1.37e²
+#>  4 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  7.00e⁰
+#>  5 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  0     
+#>  6 AL           01001       100.TRINITY.METHODIST  Over Votes <NA>  2.00e⁰
+#>  7 AL           01001       100.TRINITY.METHODIST  Richard C… repu… 1.79e³
+#>  8 AL           01001       100.TRINITY.METHODIST  Ron Crump… demo… 3.36e²
+#>  9 AL           01001       100.TRINITY.METHODIST  Under Vot… <NA>  5.00e¹
+#> 10 AL           01001       100.TRINITY.METHODIST  Write-In   <NA>  9.00e⁰
+#> # ... with 248,261 more rows
 ```
 
 ``` r
 house_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
-#> # A tibble: 60,391 x 6
-#>    state_postal precinct               candidate     party   writein votes
-#>    <chr>        <chr>                  <chr>         <chr>   <lgl>   <int>
-#>  1 AK           01-446 Aurora          Bernie Souph… new al… F          20
-#>  2 AK           01-446 Aurora          Don Young     republ… F         389
-#>  3 AK           01-446 Aurora          Jim C. McDer… libert… F         109
-#>  4 AK           01-446 Aurora          Steve Lindbe… democr… F         334
-#>  5 AK           01-446 Aurora          <NA>          none    T           4
-#>  6 AK           01-455 Fairbanks No. 1 Bernie Souph… new al… F           4
-#>  7 AK           01-455 Fairbanks No. 1 Don Young     republ… F         106
-#>  8 AK           01-455 Fairbanks No. 1 Jim C. McDer… libert… F          23
-#>  9 AK           01-455 Fairbanks No. 1 Steve Lindbe… democr… F          62
-#> 10 AK           01-455 Fairbanks No. 1 <NA>          none    T           0
-#> # ... with 60,381 more rows
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+#> # A tibble: 170,309 x 6
+#>    state_postal county_fips precinct               candidate  party  votes
+#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
+#>  1 AL           01001       10.JONES.COMMUNITY.CTR Martha Ro… repu… 1.92e²
+#>  2 AL           01001       10.JONES.COMMUNITY.CTR Nathan Ma… demo… 1.43e²
+#>  3 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
+#>  4 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  1.00e¹
+#>  5 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  1.30e¹
+#>  6 AL           01001       100.TRINITY.METHODIST  Martha Ro… repu… 1.40e³
+#>  7 AL           01001       100.TRINITY.METHODIST  Nathan Ma… demo… 4.38e²
+#>  8 AL           01001       100.TRINITY.METHODIST  Over Votes <NA>  1.00e⁰
+#>  9 AL           01001       100.TRINITY.METHODIST  Under Vot… <NA>  1.15e²
+#> 10 AL           01001       100.TRINITY.METHODIST  Write-In   <NA>  2.35e²
+#> # ... with 170,299 more rows
+```
+
+``` r
+state_precincts_2016 %>%
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+#> # A tibble: 1,610,458 x 6
+#>    state_postal county_fips precinct               candidate   party votes
+#>    <chr>        <chr>       <chr>                  <chr>       <chr> <dbl>
+#>  1 AL           01001       10.JONES.COMMUNITY.CTR Ben Fuller  repu… 200  
+#>  2 AL           01001       10.JONES.COMMUNITY.CTR Ella B. Be… demo… 183  
+#>  3 AL           01001       10.JONES.COMMUNITY.CTR Karen H. J… inde…  30.0
+#>  4 AL           01001       10.JONES.COMMUNITY.CTR Kelli Wise  repu… 220  
+#>  5 AL           01001       10.JONES.COMMUNITY.CTR "Michael F… repu… 221  
+#>  6 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   94.0
+#>  7 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>  104  
+#>  8 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>  112  
+#>  9 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   83.0
+#> 10 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   75.0
+#> # ... with 1,610,448 more rows
+```
+
+``` r
+local_precincts_2016 %>%
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+#> # A tibble: 488,652 x 6
+#>    state_postal county_fips precinct               candidate  party  votes
+#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
+#>  1 AL           01001       10.JONES.COMMUNITY.CTR Larry Mac… demo… 183   
+#>  2 AL           01001       10.JONES.COMMUNITY.CTR Ledronia … demo… 173   
+#>  3 AL           01001       10.JONES.COMMUNITY.CTR Mark Hind… repu…  18.0 
+#>  4 AL           01001       10.JONES.COMMUNITY.CTR No-Local … <NA>   66.0 
+#>  5 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
+#>  6 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
+#>  7 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
+#>  8 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
+#>  9 AL           01001       10.JONES.COMMUNITY.CTR Spence Ag… repu… 212   
+#> 10 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>    2.00
+#> # ... with 488,642 more rows
 ```
 
 State identifiers:

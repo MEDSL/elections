@@ -18,6 +18,8 @@ library(dplyr)
 
 This is an R package for accessing data on U.S. elections from the [MIT Election Data and Science Lab](https://electionlab.mit.edu).
 
+The datasets available via the package are the latest 
+
 ## Installation
 
 Install from GitHub:
@@ -37,25 +39,36 @@ library(dplyr)
 
 The package makes available the following datasets:
 
-* `presidential_precincts_2016`
-* `senate_precincts_2016`
-* `house_precincts_2016`
+* [`presidential_precincts_2016`](http://dx.doi.org/10.7910/DVN/LYWX3D)
+* [`senate_precincts_2016`](http://dx.doi.org/10.7910/DVN/NLTQAD)
+* [`house_precincts_2016`](http://dx.doi.org/10.7910/DVN/PSKDUJ)
+* [`state_precincts_2016`](http://dx.doi.org/10.7910/DVN/GSZG1O)
+* [`local_precincts_2016`](http://dx.doi.org/10.7910/DVN/Q8OHRS)
 * `state_ids`
 
 ```{r}
 presidential_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
+  select(state_postal, county_fips, precinct, candidate, party, votes)
 ```
 
 ```{r}
 senate_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
-
+  select(state_postal, county_fips, precinct, candidate, party, votes)
 ```
 
 ```{r}
 house_precincts_2016 %>%
-  select(state_postal, precinct, candidate, party, writein, votes)
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+```
+
+```{r}
+state_precincts_2016 %>%
+  select(state_postal, county_fips, precinct, candidate, party, votes)
+```
+
+```{r}
+local_precincts_2016 %>%
+  select(state_postal, county_fips, precinct, candidate, party, votes)
 ```
 
 State identifiers:
