@@ -32,6 +32,8 @@ The package makes available the following datasets:
 -   [`state_precincts_2016`](http://dx.doi.org/10.7910/DVN/GSZG1O)
 -   [`local_precincts_2016`](http://dx.doi.org/10.7910/DVN/Q8OHRS)
 -   `state_ids`
+-   `county_ids`
+-   `county_sub_ids`
 
 ``` r
 presidential_precincts_2016 %>%
