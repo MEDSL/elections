@@ -1,3 +1,20 @@
+# elections 0.2.0
+
+We've added identifiers for candidates in U.S. House and Senate races. [FEC
+IDs](https://www.fec.gov/data) are present for nearly all candidates. A
+comprehensive set of identifiers from the [@unitedstates
+project](https://github.com/unitedstates/congress-legislators) is available for
+incumbents and winners (GovTrack, ICPSR, MapLight, Open Secrets, WikiData, and
+Google Knowledge Graph entity IDs). Further details are in the codebook, which
+now gives the source of variables. Our approach was to join the datasets on
+`office`, `state`, `district`, and a normalizing transformation of `candidate`,
+which remains in the data as `candidate_normalized`. (This is a single word from
+`candidate`, usually the last name, in lowercase.) There are two new files in
+the release. We're providing the returns in [Feather
+format](https://github.com/wesm/feather) as well as CSV, and including a
+supplementary table of variable-value frequencies.
+
+
 # elections 0.1.0
 
 This release adds returns from ten new states; geographic identifiers; and

@@ -36,96 +36,96 @@ The package makes available the following datasets:
 ``` r
 presidential_precincts_2016 %>%
   select(state_postal, county_fips, precinct, candidate, party, votes)
-#> # A tibble: 496,855 x 6
-#>    state_postal county_fips precinct               candidate  party  votes
-#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
-#>  1 AL           01001       10.JONES.COMMUNITY.CTR Donald Tr… repu… 2.18e²
-#>  2 AL           01001       10.JONES.COMMUNITY.CTR Gary John… inde… 0     
-#>  3 AL           01001       10.JONES.COMMUNITY.CTR Hillary C… demo… 1.35e²
-#>  4 AL           01001       10.JONES.COMMUNITY.CTR Jill Stein inde… 1.00e⁰
-#>  5 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
-#>  6 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  0     
-#>  7 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  4.00e⁰
-#>  8 AL           01001       100.TRINITY.METHODIST  Donald Tr… repu… 1.80e³
-#>  9 AL           01001       100.TRINITY.METHODIST  Gary John… inde… 6.00e¹
-#> 10 AL           01001       100.TRINITY.METHODIST  Hillary C… demo… 2.85e²
-#> # ... with 496,845 more rows
+#> # A tibble: 505,862 x 6
+#>    state_postal county_fips precinct                candidate party  votes
+#>    <chr>              <dbl> <chr>                   <chr>     <chr>  <dbl>
+#>  1 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … demo…  119  
+#>  2 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … repu…  120  
+#>  3 AL                  1001 10.JONES.COMMUNITY.CTR  Over Vot… <NA>     0  
+#>  4 AL                  1001 10.JONES.COMMUNITY.CTR  Under Vo… <NA>   119  
+#>  5 AL                  1001 100.TRINITY.METHODIST   Alabama … demo…  127  
+#>  6 AL                  1001 100.TRINITY.METHODIST   Alabama … repu…  759  
+#>  7 AL                  1001 100.TRINITY.METHODIST   Over Vot… <NA>     0  
+#>  8 AL                  1001 100.TRINITY.METHODIST   Under Vo… <NA>  1299  
+#>  9 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … demo…  173  
+#> 10 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … repu…   62.0
+#> # ... with 505,852 more rows
 ```
 
 ``` r
 senate_precincts_2016 %>%
   select(state_postal, county_fips, precinct, candidate, party, votes)
-#> # A tibble: 248,271 x 6
-#>    state_postal county_fips precinct               candidate  party  votes
-#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
-#>  1 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
-#>  2 AL           01001       10.JONES.COMMUNITY.CTR Richard C… repu… 2.14e²
-#>  3 AL           01001       10.JONES.COMMUNITY.CTR Ron Crump… demo… 1.37e²
-#>  4 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  7.00e⁰
-#>  5 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  0     
-#>  6 AL           01001       100.TRINITY.METHODIST  Over Votes <NA>  2.00e⁰
-#>  7 AL           01001       100.TRINITY.METHODIST  Richard C… repu… 1.79e³
-#>  8 AL           01001       100.TRINITY.METHODIST  Ron Crump… demo… 3.36e²
-#>  9 AL           01001       100.TRINITY.METHODIST  Under Vot… <NA>  5.00e¹
-#> 10 AL           01001       100.TRINITY.METHODIST  Write-In   <NA>  9.00e⁰
-#> # ... with 248,261 more rows
+#> # A tibble: 257,278 x 6
+#>    state_postal county_fips precinct                candidate party  votes
+#>    <chr>              <dbl> <chr>                   <chr>     <chr>  <dbl>
+#>  1 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … demo…  119  
+#>  2 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … repu…  120  
+#>  3 AL                  1001 10.JONES.COMMUNITY.CTR  Over Vot… <NA>     0  
+#>  4 AL                  1001 10.JONES.COMMUNITY.CTR  Under Vo… <NA>   119  
+#>  5 AL                  1001 100.TRINITY.METHODIST   Alabama … demo…  127  
+#>  6 AL                  1001 100.TRINITY.METHODIST   Alabama … repu…  759  
+#>  7 AL                  1001 100.TRINITY.METHODIST   Over Vot… <NA>     0  
+#>  8 AL                  1001 100.TRINITY.METHODIST   Under Vo… <NA>  1299  
+#>  9 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … demo…  173  
+#> 10 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … repu…   62.0
+#> # ... with 257,268 more rows
 ```
 
 ``` r
 house_precincts_2016 %>%
   select(state_postal, county_fips, precinct, candidate, party, votes)
-#> # A tibble: 170,309 x 6
-#>    state_postal county_fips precinct               candidate  party  votes
-#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
-#>  1 AL           01001       10.JONES.COMMUNITY.CTR Martha Ro… repu… 1.92e²
-#>  2 AL           01001       10.JONES.COMMUNITY.CTR Nathan Ma… demo… 1.43e²
-#>  3 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>  0     
-#>  4 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>  1.00e¹
-#>  5 AL           01001       10.JONES.COMMUNITY.CTR Write-In   <NA>  1.30e¹
-#>  6 AL           01001       100.TRINITY.METHODIST  Martha Ro… repu… 1.40e³
-#>  7 AL           01001       100.TRINITY.METHODIST  Nathan Ma… demo… 4.38e²
-#>  8 AL           01001       100.TRINITY.METHODIST  Over Votes <NA>  1.00e⁰
-#>  9 AL           01001       100.TRINITY.METHODIST  Under Vot… <NA>  1.15e²
-#> 10 AL           01001       100.TRINITY.METHODIST  Write-In   <NA>  2.35e²
-#> # ... with 170,299 more rows
+#> # A tibble: 179,316 x 6
+#>    state_postal county_fips precinct                candidate party  votes
+#>    <chr>              <dbl> <chr>                   <chr>     <chr>  <dbl>
+#>  1 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … demo…  119  
+#>  2 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … repu…  120  
+#>  3 AL                  1001 10.JONES.COMMUNITY.CTR  Over Vot… <NA>     0  
+#>  4 AL                  1001 10.JONES.COMMUNITY.CTR  Under Vo… <NA>   119  
+#>  5 AL                  1001 100.TRINITY.METHODIST   Alabama … demo…  127  
+#>  6 AL                  1001 100.TRINITY.METHODIST   Alabama … repu…  759  
+#>  7 AL                  1001 100.TRINITY.METHODIST   Over Vot… <NA>     0  
+#>  8 AL                  1001 100.TRINITY.METHODIST   Under Vo… <NA>  1299  
+#>  9 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … demo…  173  
+#> 10 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … repu…   62.0
+#> # ... with 179,306 more rows
 ```
 
 ``` r
 state_precincts_2016 %>%
   select(state_postal, county_fips, precinct, candidate, party, votes)
-#> # A tibble: 1,610,458 x 6
-#>    state_postal county_fips precinct               candidate   party votes
-#>    <chr>        <chr>       <chr>                  <chr>       <chr> <dbl>
-#>  1 AL           01001       10.JONES.COMMUNITY.CTR Ben Fuller  repu… 200  
-#>  2 AL           01001       10.JONES.COMMUNITY.CTR Ella B. Be… demo… 183  
-#>  3 AL           01001       10.JONES.COMMUNITY.CTR Karen H. J… inde…  30.0
-#>  4 AL           01001       10.JONES.COMMUNITY.CTR Kelli Wise  repu… 220  
-#>  5 AL           01001       10.JONES.COMMUNITY.CTR "Michael F… repu… 221  
-#>  6 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   94.0
-#>  7 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>  104  
-#>  8 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>  112  
-#>  9 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   83.0
-#> 10 AL           01001       10.JONES.COMMUNITY.CTR No-Statewi… <NA>   75.0
-#> # ... with 1,610,448 more rows
+#> # A tibble: 1,619,465 x 6
+#>    state_postal county_fips precinct                candidate party  votes
+#>    <chr>              <dbl> <chr>                   <chr>     <chr>  <dbl>
+#>  1 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … demo…  119  
+#>  2 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … repu…  120  
+#>  3 AL                  1001 10.JONES.COMMUNITY.CTR  Over Vot… <NA>     0  
+#>  4 AL                  1001 10.JONES.COMMUNITY.CTR  Under Vo… <NA>   119  
+#>  5 AL                  1001 100.TRINITY.METHODIST   Alabama … demo…  127  
+#>  6 AL                  1001 100.TRINITY.METHODIST   Alabama … repu…  759  
+#>  7 AL                  1001 100.TRINITY.METHODIST   Over Vot… <NA>     0  
+#>  8 AL                  1001 100.TRINITY.METHODIST   Under Vo… <NA>  1299  
+#>  9 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … demo…  173  
+#> 10 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … repu…   62.0
+#> # ... with 1,619,455 more rows
 ```
 
 ``` r
 local_precincts_2016 %>%
   select(state_postal, county_fips, precinct, candidate, party, votes)
-#> # A tibble: 488,652 x 6
-#>    state_postal county_fips precinct               candidate  party  votes
-#>    <chr>        <chr>       <chr>                  <chr>      <chr>  <dbl>
-#>  1 AL           01001       10.JONES.COMMUNITY.CTR Larry Mac… demo… 183   
-#>  2 AL           01001       10.JONES.COMMUNITY.CTR Ledronia … demo… 173   
-#>  3 AL           01001       10.JONES.COMMUNITY.CTR Mark Hind… repu…  18.0 
-#>  4 AL           01001       10.JONES.COMMUNITY.CTR No-Local … <NA>   66.0 
-#>  5 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
-#>  6 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
-#>  7 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
-#>  8 AL           01001       10.JONES.COMMUNITY.CTR Over Votes <NA>    0   
-#>  9 AL           01001       10.JONES.COMMUNITY.CTR Spence Ag… repu… 212   
-#> 10 AL           01001       10.JONES.COMMUNITY.CTR Under Vot… <NA>    2.00
-#> # ... with 488,642 more rows
+#> # A tibble: 497,659 x 6
+#>    state_postal county_fips precinct                candidate party  votes
+#>    <chr>              <dbl> <chr>                   <chr>     <chr>  <dbl>
+#>  1 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … demo…  119  
+#>  2 AL                  1001 10.JONES.COMMUNITY.CTR  Alabama … repu…  120  
+#>  3 AL                  1001 10.JONES.COMMUNITY.CTR  Over Vot… <NA>     0  
+#>  4 AL                  1001 10.JONES.COMMUNITY.CTR  Under Vo… <NA>   119  
+#>  5 AL                  1001 100.TRINITY.METHODIST   Alabama … demo…  127  
+#>  6 AL                  1001 100.TRINITY.METHODIST   Alabama … repu…  759  
+#>  7 AL                  1001 100.TRINITY.METHODIST   Over Vot… <NA>     0  
+#>  8 AL                  1001 100.TRINITY.METHODIST   Under Vo… <NA>  1299  
+#>  9 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … demo…  173  
+#> 10 AL                  1001 110.CENTRAL.AL.ELECTRIC Alabama … repu…   62.0
+#> # ... with 497,649 more rows
 ```
 
 State identifiers:
@@ -139,4 +139,51 @@ head(state_ids)
 #> 4   Arkansas          42           AR          5
 #> 5 California          71           CA          6
 #> 6   Colorado          62           CO          8
+```
+
+County identifiers:
+
+``` r
+head(county_ids)
+#>   state_postal county_fips county_ansi    county_name  land_area
+#> 1           AL       01001    00161526 Autauga County 1539614693
+#> 2           AL       01003    00161527 Baldwin County 4117605847
+#> 3           AL       01005    00161528 Barbour County 2292144656
+#> 4           AL       01007    00161529    Bibb County 1612165763
+#> 5           AL       01009    00161530  Blount County 1670079465
+#> 6           AL       01011    00161531 Bullock County 1613059168
+#>   water_area land_area_sq_mi water_area_sq_mi county_lat county_long
+#> 1   25744269         594.449            9.940   32.53224   -86.64644
+#> 2 1133109409        1589.817          437.496   30.65922   -87.74607
+#> 3   50538698         885.002           19.513   31.87025   -85.40510
+#> 4    9603798         622.461            3.708   33.01589   -87.12715
+#> 5   15039864         644.821            5.807   33.97736   -86.56644
+#> 6    6054988         622.806            2.338   32.10176   -85.71726
+```
+
+County subdivision identifiers:
+
+``` r
+head(county_sub_ids)
+#>   state_postal county_sub_fips county_sub_ansi  county_sub_name
+#> 1           AL      0100190171        00161593 Autaugaville CCD
+#> 2           AL      0100190315        00165647  Billingsley CCD
+#> 3           AL      0100192106        00165648      Marbury CCD
+#> 4           AL      0100192628        00165649   Prattville CCD
+#> 5           AL      0100390207        00161594  Bay Minette CCD
+#> 6           AL      0100390846        00165650       Daphne CCD
+#>   functional_status  land_area water_area land_area_sq_mi water_area_sq_mi
+#> 1                 S  478160386   13912232         184.619            5.372
+#> 2                 S  386871321    1596305         149.372            0.616
+#> 3                 S  292756921     516153         113.034            0.199
+#> 4                 S  381826065    9719579         147.424            3.753
+#> 5                 S 1338292029   27613551         516.717           10.662
+#> 6                 S  297343727  142430774         114.805           54.993
+#>   county_sub_lat county_sub_long
+#> 1       32.45741       -86.72900
+#> 2       32.60614       -86.74899
+#> 3       32.63852       -86.51487
+#> 4       32.47982       -86.50648
+#> 5       30.80966       -87.70619
+#> 6       30.66744       -87.90619
 ```

@@ -75,3 +75,15 @@ State identifiers:
 ```{r}
 head(state_ids)
 ```
+
+County identifiers:
+
+```{r}
+head(county_ids)
+```
+
+County subdivision identifiers:
+
+```{r}
+head(county_sub_ids)
+```

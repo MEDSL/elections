@@ -20,6 +20,12 @@ man/%.Rd: $(DATAVERSE_DIR)/%.Rd
 data/state_ids.rda: data-ext/state_ids.csv data-ext/state_ids.R
 	Rscript data-ext/state_ids.R
 
+data/county_ids.rda: data-ext/county_ids.txt data-ext/county_ids.R
+	cd data-ext && Rscript county_ids.R
+
+data/county_sub_ids.rda: data-ext/county_sub_ids.txt data-ext/county_sub_ids.R
+	cd data-ext && Rscript county_sub_ids.R
+
 README.md: README.Rmd $(RDA_FILES)
 	Rscript -e "rmarkdown::render('README.Rmd')"
 
