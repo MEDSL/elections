@@ -1,5 +1,5 @@
 PKG := $(shell head -1 DESCRIPTION | sed 's/Package: //' | cat)
-DATAVERSE_DIR = ../medsl-dataverse-python/medsl/output/r-package
+DATAVERSE_DIR = ../medsl-data/medsl/output/r-package
 VERSION := $(shell sed -n 3p DESCRIPTION | sed 's/Version: //' | cat)
 BINARY := $(PKG)_$(VERSION).tar.gz
 RDA_FILES = $(wildcard data/*.rda)

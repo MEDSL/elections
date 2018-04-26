@@ -8,7 +8,8 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "README-",
+  cache.lazy = FALSE
 )
 devtools::load_all()
 library(dplyr)
@@ -49,27 +50,27 @@ The package makes available the following datasets:
 
 ```{r}
 presidential_precincts_2016 %>%
-  select(state_postal, county_fips, precinct, candidate, party, votes)
+  select(state, county_fips, precinct, candidate, office, votes)
 ```
 
 ```{r}
 senate_precincts_2016 %>%
-  select(state_postal, county_fips, precinct, candidate, party, votes)
+  select(state, county_fips, precinct, candidate, office, votes)
 ```
 
 ```{r}
 house_precincts_2016 %>%
-  select(state_postal, county_fips, precinct, candidate, party, votes)
+  select(state, county_fips, precinct, candidate, office, votes)
 ```
 
 ```{r}
 state_precincts_2016 %>%
-  select(state_postal, county_fips, precinct, candidate, party, votes)
+  select(state, county_fips, precinct, candidate, office, votes)
 ```
 
 ```{r}
 local_precincts_2016 %>%
-  select(state_postal, county_fips, precinct, candidate, party, votes)
+  select(state, county_fips, precinct, candidate, office, votes)
 ```
 
 State identifiers:

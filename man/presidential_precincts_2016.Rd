@@ -2,7 +2,7 @@
 \name{presidential_precincts_2016}
 \alias{presidential_precincts_2016}
 \title{U.S. President Precinct-Level Returns 2016}
-\format{A \code{dataframe} with 36 variables:
+\format{A \code{dataframe} with 37 variables:
     \describe{
         \item{\code{year}}{Year of election.}
         \item{\code{state}}{State name.}
@@ -24,6 +24,7 @@
         \item{\code{candidate_last}}{Candidate's last name.}
         \item{\code{candidate_first}}{Candidate's first name.}
         \item{\code{candidate_middle}}{Candidate's middle name.}
+        \item{\code{candidate_normalized}}{A normalizing transformation of the candidate's name for joins by name. This is a single word from \code{candidate}, usually the last name, in lowercase. In the case of hyphenated names, only the final name is included.}
         \item{\code{candidate_full}}{Candidate's official full name.}
         \item{\code{candidate_suffix}}{Candidate name suffix.}
         \item{\code{candidate_nickname}}{Candidate's nickname.}
@@ -41,7 +42,7 @@
         \item{\code{mode}}{Vote mode, e.g., \code{mail} or \code{Election Day}.}
         \item{\code{votes}}{Number of votes received.}}}
 \usage{presidential_precincts_2016}
-\source{http://dx.doi.org/10.7910/DVN/LYWX3D, version 2018-03-29.}
+\source{http://dx.doi.org/10.7910/DVN/LYWX3D, version 2018-04-23.}
 \description{
 This dataset contains precinct-level returns for elections to the U.S.
 presidency.

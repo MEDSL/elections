@@ -1,3 +1,9 @@
+# elections 0.3.0 
+
+This release adds precinct-level returns from Georgia, Illinois, Iowa, Kansas,
+Kentucky, Nebraska, Nevada, New York, Ohio, Pennsylvania, and Utah.
+
+
 # elections 0.2.0
 
 We've added identifiers for candidates in U.S. House and Senate races. [FEC
