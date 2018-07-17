@@ -49,44 +49,57 @@ The package makes available the following datasets:
 * `county_sub_ids`
 
 ```{r}
+data(presidential_precincts_2016)
 presidential_precincts_2016 %>%
-  select(state, county_fips, precinct, candidate, office, votes)
+  select(state, county_fips, precinct, candidate, office, votes) %>%
+  head()
 ```
 
 ```{r}
+data(senate_precincts_2016)
 senate_precincts_2016 %>%
-  select(state, county_fips, precinct, candidate, office, votes)
+  select(state, county_fips, precinct, candidate, office, votes) %>%
+  head()
 ```
 
 ```{r}
+data(house_precincts_2016)
 house_precincts_2016 %>%
-  select(state, county_fips, precinct, candidate, office, votes)
+  select(state, county_fips, precinct, candidate, office, votes) %>%
+  head()
 ```
 
 ```{r}
+data(state_precincts_2016)
 state_precincts_2016 %>%
-  select(state, county_fips, precinct, candidate, office, votes)
+  select(state, county_fips, precinct, candidate, office, votes) %>%
+  head()
 ```
 
 ```{r}
+data(local_precincts_2016)
 local_precincts_2016 %>%
-  select(state, county_fips, precinct, candidate, office, votes)
+  select(state, county_fips, precinct, candidate, office, votes) %>%
+  head()
 ```
 
 State identifiers:
 
 ```{r}
+data(state_ids)
 head(state_ids)
 ```
 
 County identifiers:
 
 ```{r}
+data(county_ids)
 head(county_ids)
 ```
 
 County subdivision identifiers:
 
 ```{r}
+data(county_sub_ids)
 head(county_sub_ids)
 ```

@@ -1,5 +1,5 @@
 PKG := $(shell head -1 DESCRIPTION | sed 's/Package: //' | cat)
-DATAVERSE_DIR = ../medsl-data/medsl/output/r-package
+DOCS_DIR = ../documentation/output
 VERSION := $(shell sed -n 3p DESCRIPTION | sed 's/Version: //' | cat)
 BINARY := $(PKG)_$(VERSION).tar.gz
 RDA_FILES = $(wildcard data/*.rda)
@@ -8,13 +8,13 @@ R_ARGS := --no-site-file --no-environ --no-save \
 	  --no-restore --no-resave-data --no-manual --quiet
 R := R
 
-.PHONY: all clean docs
-all: $(RDA_FILES) $(RD_FILES) README.md README.Rmd build install
+.PHONY: all clean docs data
+all: data $(RDA_FILES) $(RD_FILES) README.md README.Rmd build install
 
-data/%.rda: $(DATAVERSE_DIR)/%.rda
-	cp $< $@
+data: $(wildcard ../precinct-returns/*/*.rda)
+	cp $^ data/
 
-man/%.Rd: $(DATAVERSE_DIR)/%.Rd
+man/%.Rd: $(DOCS_DIR)/%.Rd
 	cp $< $@
 
 data/state_ids.rda: data-ext/state_ids.csv data-ext/state_ids.R

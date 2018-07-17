@@ -11,11 +11,11 @@
         \item{\code{state_icpsr}}{Numeric ICPSR state code.}
         \item{\code{county_name}}{County name.}
         \item{\code{county_ansi}}{County ANSI code.}
-        \item{\code{county_fips}}{Numeric FIPS 6-4 code, the concatenation of \code{state_fips} and county FIPS codes.}
+        \item{\code{county_fips}}{Numeric FIPS 6-4 code, the concatenation of two-digit \code{state_fips} and three-digit county FIPS codes.}
         \item{\code{county_lat}}{County latitude (decimal degrees).}
         \item{\code{county_long}}{County longitude (decimal degrees).}
         \item{\code{jurisdiction}}{The name of the administrative jurisdiction, typically a county, as it appeared in source data.}
-        \item{\code{precinct}}{The name of the precinct.}
+        \item{\code{precinct}}{The name of the precinct, as it appeared in source data.}
         \item{\code{office}}{The office for which the \code{candidate} ran.}
         \item{\code{district}}{District associated with the \code{office}, where applicable.}
         \item{\code{stage}}{The electoral stage, either \code{gen} for general elections or \code{pri} for primary elections.}
@@ -42,7 +42,7 @@
         \item{\code{mode}}{Vote mode, e.g., \code{mail} or \code{Election Day}.}
         \item{\code{votes}}{Number of votes received.}}}
 \usage{presidential_precincts_2016}
-\source{http://dx.doi.org/10.7910/DVN/LYWX3D, version 2018-04-23.}
+\source{http://dx.doi.org/10.7910/DVN/LYWX3D, version 2018-07-17.}
 \description{
 This dataset contains precinct-level returns for elections to the U.S.
 presidency.
