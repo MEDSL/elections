@@ -43,19 +43,19 @@ presidential_precincts_2016 %>%
   select(state, county_fips, precinct, candidate, office, votes) %>%
   head()
 #>     state county_fips               precinct                candidate
-#> 1 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
-#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
-#> 3 Alabama       01001 10 JONES COMMUNITY CTR             Donald Trump
-#> 4 Alabama       01001 10 JONES COMMUNITY CTR             Gary Johnson
-#> 5 Alabama       01001 10 JONES COMMUNITY CTR          Hillary Clinton
-#> 6 Alabama       01001 10 JONES COMMUNITY CTR               Jill Stein
+#> 1 Alabama       01001 10 JONES COMMUNITY CTR          Hillary Clinton
+#> 2 Alabama       01001 10 JONES COMMUNITY CTR             Gary Johnson
+#> 3 Alabama       01001 10 JONES COMMUNITY CTR               Jill Stein
+#> 4 Alabama       01001 10 JONES COMMUNITY CTR             Donald Trump
+#> 5 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 6 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
 #>           office votes
-#> 1 Straight Party   119
-#> 2 Straight Party   120
-#> 3   US President   218
-#> 4   US President     0
-#> 5   US President   135
-#> 6   US President     1
+#> 1   US President   135
+#> 2   US President     0
+#> 3   US President     1
+#> 4   US President   218
+#> 5   US President     4
+#> 6 Straight Party   119
 ```
 
 ``` r
@@ -64,19 +64,19 @@ senate_precincts_2016 %>%
   select(state, county_fips, precinct, candidate, office, votes) %>%
   head()
 #>     state county_fips               precinct                candidate
-#> 1 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
-#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
-#> 3 Alabama       01001 10 JONES COMMUNITY CTR        Richard C. Shelby
+#> 1 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
+#> 3 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
 #> 4 Alabama       01001 10 JONES COMMUNITY CTR             Ron Crumpton
-#> 5 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
-#> 6 Alabama       01001  100 TRINITY METHODIST Alabama Democratic Party
+#> 5 Alabama       01001 10 JONES COMMUNITY CTR        Richard C. Shelby
+#> 6 Alabama       01001  100 TRINITY METHODIST               [Write-in]
 #>           office votes
-#> 1 Straight Party   119
-#> 2 Straight Party   120
-#> 3      US Senate   214
+#> 1      US Senate     0
+#> 2 Straight Party   119
+#> 3 Straight Party   120
 #> 4      US Senate   137
-#> 5      US Senate     0
-#> 6 Straight Party   127
+#> 5      US Senate   214
+#> 6      US Senate     9
 ```
 
 ``` r
@@ -85,19 +85,19 @@ house_precincts_2016 %>%
   select(state, county_fips, precinct, candidate, office, votes) %>%
   head()
 #>     state county_fips               precinct                candidate
-#> 1 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
-#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
-#> 3 Alabama       01001 10 JONES COMMUNITY CTR              Martha Roby
+#> 1 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
+#> 3 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
 #> 4 Alabama       01001 10 JONES COMMUNITY CTR            Nathan Mathis
-#> 5 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
-#> 6 Alabama       01001  100 TRINITY METHODIST Alabama Democratic Party
+#> 5 Alabama       01001 10 JONES COMMUNITY CTR              Martha Roby
+#> 6 Alabama       01001  100 TRINITY METHODIST               [Write-in]
 #>           office votes
-#> 1 Straight Party   119
-#> 2 Straight Party   120
-#> 3       US House   192
+#> 1       US House    13
+#> 2 Straight Party   119
+#> 3 Straight Party   120
 #> 4       US House   143
-#> 5       US House    13
-#> 6 Straight Party   127
+#> 5       US House   192
+#> 6       US House   235
 ```
 
 ``` r
@@ -105,20 +105,20 @@ data(state_precincts_2016)
 state_precincts_2016 %>%
   select(state, county_fips, precinct, candidate, office, votes) %>%
   head()
-#>     state county_fips               precinct                candidate
-#> 1 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
-#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
-#> 3 Alabama       01001 10 JONES COMMUNITY CTR               Ben Fuller
-#> 4 Alabama       01001 10 JONES COMMUNITY CTR             Ella B. Bell
-#> 5 Alabama       01001 10 JONES COMMUNITY CTR         Karen H. Jackson
-#> 6 Alabama       01001 10 JONES COMMUNITY CTR               Kelli Wise
+#>     state county_fips               precinct  candidate
+#> 1 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
+#> 2 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
+#> 3 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
+#> 4 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
+#> 5 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
+#> 6 Alabama       01001 10 JONES COMMUNITY CTR [Write-in]
 #>                                                office votes
-#> 1                                      Straight Party   119
-#> 2                                      Straight Party   120
-#> 3 CIRCUIT COURT JUDGE, 19TH JUDICIAL CIRCUIT, PLACE 2   200
-#> 4          STATE BOARD OF EDUCATION MEMBER DISTRICT 5   183
-#> 5 CIRCUIT COURT JUDGE, 19TH JUDICIAL CIRCUIT, PLACE 2    30
-#> 6     ASSOCIATE JUSTICE OF THE SUPREME COURT, PLACE 2   220
+#> 1     ASSOCIATE JUSTICE OF THE SUPREME COURT, PLACE 1     0
+#> 2     ASSOCIATE JUSTICE OF THE SUPREME COURT, PLACE 2     0
+#> 3     ASSOCIATE JUSTICE OF THE SUPREME COURT, PLACE 3     0
+#> 4 CIRCUIT COURT JUDGE, 19TH JUDICIAL CIRCUIT, PLACE 2     0
+#> 5 CIRCUIT COURT JUDGE, 19TH JUDICIAL CIRCUIT, PLACE 3     0
+#> 6            DISTRICT ATTORNEY, 19TH JUDICIAL CIRCUIT     0
 ```
 
 ``` r
@@ -127,19 +127,19 @@ local_precincts_2016 %>%
   select(state, county_fips, precinct, candidate, office, votes) %>%
   head()
 #>     state county_fips               precinct                candidate
-#> 1 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
-#> 2 Alabama       01001 10 JONES COMMUNITY CTR Alabama Republican Party
-#> 3 Alabama       01001 10 JONES COMMUNITY CTR    Larry Mack Stoudemire
-#> 4 Alabama       01001 10 JONES COMMUNITY CTR         Ledronia Goodwin
-#> 5 Alabama       01001 10 JONES COMMUNITY CTR             Mark Hindman
-#> 6 Alabama       01001 10 JONES COMMUNITY CTR No-Local Amendment No. 1
+#> 1 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 2 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 3 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 4 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 5 Alabama       01001 10 JONES COMMUNITY CTR               [Write-in]
+#> 6 Alabama       01001 10 JONES COMMUNITY CTR Alabama Democratic Party
 #>                                              office votes
-#> 1                                    Straight Party   119
-#> 2                                    Straight Party   120
-#> 3 MEMBER, AUTAUGA COUNTY COMMISSION, DISTRICT NO. 5   183
-#> 4        MEMBER, AUTAUGA COUNTY BOARD OF EDUCATION,   173
-#> 5        MEMBER, AUTAUGA COUNTY BOARD OF EDUCATION,    18
-#> 6           PROPOSED LOCAL AMENDMENT NUMBER ONE (1)    66
+#> 1        MEMBER, AUTAUGA COUNTY BOARD OF EDUCATION,     0
+#> 2        MEMBER, AUTAUGA COUNTY BOARD OF EDUCATION,     2
+#> 3 MEMBER, AUTAUGA COUNTY COMMISSION, DISTRICT NO. 3     0
+#> 4 MEMBER, AUTAUGA COUNTY COMMISSION, DISTRICT NO. 5     3
+#> 5 SUPERINTENDENT, AUTAUGA COUNTY BOARD OF EDUCATION     0
+#> 6                                    Straight Party   119
 ```
 
 State identifiers:

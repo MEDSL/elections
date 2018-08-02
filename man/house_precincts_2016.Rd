@@ -42,7 +42,7 @@
         \item{\code{mode}}{Vote mode, e.g., \code{mail} or \code{Election Day}.}
         \item{\code{votes}}{Number of votes received.}}}
 \usage{house_precincts_2016}
-\source{http://dx.doi.org/10.7910/DVN/PSKDUJ, version 2018-07-17.}
+\source{http://dx.doi.org/10.7910/DVN/PSKDUJ, version 2018-08-02.}
 \description{
 This dataset contains precinct-level returns for elections to the U.S. House of
 Representatives.

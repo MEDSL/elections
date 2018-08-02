@@ -1,6 +1,6 @@
 Package: elections
 Title: Elections Data from the MIT Election Data and Science Lab
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: person("James", "Dunham", email = "james@jdunham.io", role = c("aut", "cre"))
 Description: Access data on U.S. elections from the MIT Election Data and Science Lab.
 url: https://github.com/MEDSL/elections
@@ -11,4 +11,4 @@ LazyData: false
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

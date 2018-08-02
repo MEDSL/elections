@@ -50,3 +50,5 @@ install-code:
 docs:
 	Rscript --vanilla -e "devtools::document()"
 
+site:
+	Rscript -e "pkgdown::build_site()"
